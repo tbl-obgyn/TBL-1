@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Tep PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        .file-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .file-list li {
+            margin: 10px 0;
+        }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Danh sach tai lieu PDF</h2>
+    <ul class="file-list">
+        <li><a href="#" onclick="viewPDF('1.Quan_ly_xuat_huyet_tu_cung_bat_thuong_o_phu_nu_do_tuoi_sinh_san.pdf')">Quan ly xuat huyet tu cung bat thuong o phu nu do tuoi sinh san</a></li>
+        <li><a href="#" onclick="viewPDF('2.Quan_ly_xuat_huyet_tu_cung_bat_thuong_lien_quan_den_thai_ly.pdf')">Quan ly xuat huyet tu cung bat thuong lien quan den thai ly</a></li>
+        <li><a href="#" onclick="viewPDF('3.Quan_ly_xuat_huyet_tu_cung_co_nang_o_tuoi_day_thi.pdf')">Quan ly xuat huyet tu cung co nang o tuoi day thi</a></li>
+        <li><a href="#" onclick="viewPDF('4.Quan_ly_xuat_huyet_tu_cung_bat_thuong_lien_quan_den_roi_loan_phong_noan.pdf')">Quan ly xuat huyet tu cung bat thuong lien quan den roi loan phong noan</a></li>
+        <li><a href="#" onclick="viewPDF('5.Quan_ly_xuat_huyet_tu_cung_bat_thuong_lien_quan_den_cac_nguyen_nhan_ac_tinh.pdf')">Quan ly xuat huyet tu cung bat thuong lien quan den cac nguyen nhan ac tinh</a></li>
+        <li><a href="#" onclick="viewPDF('6.Quan_ly_xuat_huyet_tu_cung_bat_thuong_o_tuoi_quanh_man_kinh.pdf')">Quan ly xuat huyet tu cung bat thuong o tuoi quanh man kinh</a></li>
+    </ul>
+    
+    <iframe id="pdfViewer" src="" hidden></iframe>
+    
+    <script>
+        function viewPDF(file) {
+            document.getElementById('pdfViewer').src = file;
+            document.getElementById('pdfViewer').hidden = false;
+        }
+    </script>
+</body>
+</html>
